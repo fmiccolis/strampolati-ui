@@ -15,18 +15,16 @@ export type AuthResponse = {
     refresh: string
 }
 
-export type ToDoResponse = {
+export type ItemResponse = {
     count: number,
     next: string | null,
     previous: string | null,
-    results: ToDoProps[]
+    results: ItemProps[]
 }
 
-export type ToDoProps = {
+export type ItemProps = {
     id?: number | null,
-    title: string,
-    description: string,
-    owner?: number | null,
-    due_date?: Date | undefined,
-    done_date?: Date | undefined
+    name: string,
+    image: string,
+    quantity: number
 }
